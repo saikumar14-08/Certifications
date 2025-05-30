@@ -1,0 +1,26 @@
+{
+  "name": "webpack-basic",
+  "version": "1.0.0",
+  "description": "Learning webpack, node, js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saikumar14-08/Certifications.git"
+  },
+  "author": "Sai Kumar Reddy Boreddy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saikumar14-08/Certifications/issues"
+  },
+  "homepage": "https://github.com/saikumar14-08/Certifications#readme",
+  "devDependencies": {
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}
