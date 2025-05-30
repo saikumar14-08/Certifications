@@ -1,10 +1,15 @@
 const path = require("path");
+const { loadEnvFile } = require("process");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "main.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist"),
+  },
+  devServer: {
+    contentBase: path.join(__dirname,"dist"),
+    port:9000
   },
   module: {
     rules: [
@@ -12,12 +17,20 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
-          }
-        }
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+          },
+        },
+      },
+      {
+        test: /\.css$/,
+        use: [{ loader: "style-loader" }, { loader: "css-loader" }],
+      },
+      {
+        test: /\.(jpeg|png|jpg)$/,
+        use: [{loader: 'url-loader'}]
       }
-    ]
-  }
-}
+    ],
+  },
+};

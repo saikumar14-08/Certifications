@@ -1,8 +1,13 @@
+import React from "react";
+import { createRoot } from "react-dom/client";
+import "./style.css";
 
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-
-const Greeting = () => <h1> Hello, Sai</h1>
+const Greeting = () => (
+  <>
+    <h1> Hello, Sai</h1>
+    <div id="image"></div>
+  </>
+);
 
 const root = createRoot(document.getElementById("target"));
-root.render(<Greeting />)
+root.render(<Greeting />);

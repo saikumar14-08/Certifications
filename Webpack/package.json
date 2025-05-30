@@ -4,7 +4,8 @@
   "description": "Learning webpack, node, js",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -21,8 +22,12 @@
     "@babel/preset-env": "^7.27.2",
     "@babel/preset-react": "^7.27.1",
     "babel-loader": "^8.4.1",
+    "css-loader": "^5.2.7",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
     "webpack": "^4.28.4",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.11.3"
   },
   "dependencies": {
     "jquery": "^3.7.1",

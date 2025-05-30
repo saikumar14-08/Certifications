@@ -34,3 +34,8 @@ Webpack by Eve Porcello:
         }
     ->Even after using the above we mmight not see a much difference so we use babel preset-env
     
+-> For CSS, we install css loader and style loader and we add an entry in the webpack.config.js and our styles are loaded.
+-> We add images/assets in a similar way as the CSS. For this we use url loader. npm i url-loader --save-dev 
+-> Webpack internally uses inline url loaders to reduce the network calls.
+
+-> We can setup dev server in webpack. This uses node js express server and works on socket.io to help with live reloading stuff.
