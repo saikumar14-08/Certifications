@@ -4,7 +4,7 @@
   "description": "Learning webpack, node, js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,10 +17,16 @@
   },
   "homepage": "https://github.com/saikumar14-08/Certifications#readme",
   "devDependencies": {
+    "@babel/core": "^7.27.3",
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
+    "babel-loader": "^8.4.1",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1"
   },
   "dependencies": {
-    "jquery": "^3.7.1"
+    "jquery": "^3.7.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }
