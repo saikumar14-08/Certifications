@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
-const { loadEnvFile } = require("process");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   // entry: {
@@ -13,11 +13,13 @@ module.exports = {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
   },
+
   plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
   optimization: {
-    splitChunks: {
-      chunks: "all",
-    },
+    // splitChunks: {
+    //   chunks: "all",
+    // },
+    minimizer: [new UglifyJsPlugin()],
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
