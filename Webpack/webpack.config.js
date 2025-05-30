@@ -1,15 +1,27 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const { loadEnvFile } = require("process");
 
 module.exports = {
+  // entry: {
+  //   about: "./src/about.js",
+  //   contact: "./src/contact.js",
+  // },
   entry: "./src/index.js",
   output: {
+    // filename: "[name].bundle.js",
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
   },
+  plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
   devServer: {
-    contentBase: path.join(__dirname,"dist"),
-    port:9000
+    contentBase: path.join(__dirname, "dist"),
+    port: 9000,
   },
   module: {
     rules: [
@@ -29,8 +41,8 @@ module.exports = {
       },
       {
         test: /\.(jpeg|png|jpg)$/,
-        use: [{loader: 'url-loader'}]
-      }
+        use: [{ loader: "url-loader" }],
+      },
     ],
   },
 };

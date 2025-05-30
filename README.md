@@ -39,3 +39,19 @@ Webpack by Eve Porcello:
 -> Webpack internally uses inline url loaders to reduce the network calls.
 
 -> We can setup dev server in webpack. This uses node js express server and works on socket.io to help with live reloading stuff.
+
+-> Code Splitting:
+    -> Optimize code for performance and developer workflow.
+    -> We can do this by setting the entry and output values in our webpack.config file.
+    -> We can also optimize this by loading the common libraries as a separate bundle.
+    optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  },
+  -> By doing this all the same imports in different files are loaded once as a bundle and then it will be used in other bundles.
+
+-> HTMLWebPackPlugin: Generates an HTML file that is linked to the bundle.
+-> npm install html-webpack-plugin@4.5.2 --save-dev
+
+-> To make our application production ready we use uglify plugin
