@@ -72,3 +72,8 @@ query {
   }
 }
 ```
+
+Overview of mutations: 
+Definition of Mutations: Mutations in GraphQL are similar to the operations in REST APIs that add, update, or delete data. They are used to modify data on the server or database.
+Types of Mutations: Mutations include creating new items, updating existing items, and deleting items.
+Example: A mutation that creates a new contact and sends it to the database, effectively modifying the database.
