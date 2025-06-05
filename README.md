@@ -1,3 +1,4 @@
-
-JavaScript Practice: Scope and Closures
-Webpack 4 by Eve Porcello
+```bash
+Webpack 4 by Eve Porcello <br>
+Migrating from REST to GraphQL
+```
